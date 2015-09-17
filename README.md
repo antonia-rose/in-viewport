@@ -19,7 +19,7 @@ viewport.setViewports({
 There are several ways to ask for your viewport:
 
 ```javascript
-viewport.is(200.5);
+viewport.is(200);
 viewport.is('<=500px');
 viewport.is('<portrait');
 ```
