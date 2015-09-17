@@ -2,6 +2,7 @@
 	"name": "in-viewport",
 	"version": "0.1.0",
 	"description": "Compares a specified value with the current window-width",
+	"repository": "NikFlip/in-viewport",
 	"main": "karma.conf.js",
 	"directories": {
 		"test": "test"
