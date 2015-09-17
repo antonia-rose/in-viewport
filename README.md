@@ -6,7 +6,7 @@ Compares a specified pixel value with the current window width.
 
 Define your viewports:
 
-```
+```javascript
 var viewport = new inViewport();
 
 viewport.setViewports({
@@ -18,7 +18,7 @@ viewport.setViewports({
 
 There are several ways to ask for your viewport:
 
-```
+```javascript
 viewport.is(200.5);
 viewport.is('<=500px');
 viewport.is('<portrait');
