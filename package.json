@@ -1,0 +1,24 @@
+{
+	"name": "in-viewport",
+	"version": "0.1.0",
+	"description": "Compares a specified value with the current window-width",
+	"main": "karma.conf.js",
+	"directories": {
+		"test": "test"
+	},
+	"dependencies": {
+		"chai": "^3.2.0",
+		"karma": "^0.13.9",
+		"karma-chrome-launcher": "^0.2.0",
+		"karma-mocha": "^0.2.0",
+		"karma-chai": "^0.1.0"
+	},
+	"devDependencies": {
+		"mocha": "^2.3.2"
+	},
+	"scripts": {
+		"test": "mocha"
+	},
+	"author": "Niklas Köhler <kontakt@niklaskoehler.de>",
+	"license": "MIT"
+}
