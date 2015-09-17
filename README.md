@@ -26,7 +26,7 @@ viewport.is('<portrait');
 
 ## Methods
 
-**is(String|Number)**: returns ``true|false`` if the current window width accords to the given param
-**setViewports(Object)**: expects a object with viewports (see example ahead)
-**addViewport('String', number)**: Adds a new viewport to the viewport set
-**getViewports()**: Returns a object with all defined viewports
+- **is(String|Number)**: returns ``true|false`` if the current window width accords to the given param
+- **setViewports(Object)**: expects a object with viewports (see example ahead)
+- **addViewport('String', number)**: Adds a new viewport to the viewport set
+- **getViewports()**: Returns a object with all defined viewports
