@@ -27,42 +27,42 @@ describe('in viewport test', function() {
 	});
 
 	it('should handle float values', function() {
-		window.innerWidth = 300;
+		window.outerWidth = 300;
 		var check = viewport.is(1024.5);
 
 		expect(check).to.be.false;
 	});
 
 	it('should handle string values', function() {
-		window.innerWidth = 1000;
+		window.outerWidth = 1000;
 		var check = viewport.is('999px');
 
 		expect(check).to.be.true;
 	});
 
 	it('should handle string values with higher than operators', function() {
-		window.innerWidth = 1201;
+		window.outerWidth = 1201;
 		var check = viewport.is('>1200px');
 
 		expect(check).to.be.true;
 	});
 
 	it('should handle string values with lower than operators', function() {
-		window.innerWidth = 1000;
+		window.outerWidth = 1000;
 		var check = viewport.is('<1200px');
 
 		expect(check).to.be.true;
 	});
 
 	it('should handle string values with lower and even than operators', function() {
-		window.innerWidth = 1200;
+		window.outerWidth = 1200;
 		var check = viewport.is('<=1200px');
 
 		expect(check).to.be.true;
 	});
 
 	it('should handle string values with larger and even than operators', function() {
-		window.innerWidth = 1000;
+		window.outerWidth = 1000;
 		var check = viewport.is('>=1000px');
 
 		expect(check).to.be.true;
