@@ -19,7 +19,7 @@ inViewport.prototype.is = function(target) {
 	if (targetWidth && targetType.operator) {
 		switch(targetType.operator) {
 			case ('<'):
-				isInViewport = (targetWidth < windowWidth);
+				isInViewport = (windowWidth < targetWidth);
 			break;
 			case ('>'):
 				isInViewport = (windowWidth > targetWidth);

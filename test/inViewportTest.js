@@ -51,7 +51,7 @@ describe('in viewport test', function() {
 		window.innerWidth = 1000;
 		var check = viewport.is('<1200px');
 
-		expect(check).to.be.false;
+		expect(check).to.be.true;
 	});
 
 	it('should handle string values with lower and even than operators', function() {
