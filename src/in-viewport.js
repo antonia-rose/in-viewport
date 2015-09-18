@@ -12,7 +12,7 @@ var inViewport = function() {
 inViewport.prototype.is = function(target) {
 	var targetType = this.getTargetType(target),
 		targetWidth = targetType.width,
-		windowWidth = window.innerWidth,
+		windowWidth = window.outerWidth,
 		isInViewport = false;
 
 	/* If getTargetType() returns width and operators */
