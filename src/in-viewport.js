@@ -12,7 +12,7 @@ var inViewport = function() {
 inViewport.prototype.is = function(target) {
 	var targetType = this.getTargetType(target),
 		targetWidth = targetType.width,
-		windowWidth = window.outerWidth,
+		windowWidth = (window.outerWidth > 0) ? window.outerWidth : screen.width,
 		isInViewport = false;
 
 	/* If getTargetType() returns width and operators */
@@ -26,11 +26,11 @@ inViewport.prototype.is = function(target) {
 			break;
 			case ('>='):
 			case ('=>'):
-				isInViewport = (windowWidth >= targetWidth);
+				isInViewport = (targetWidth >= windowWidth);
 			break;
 			case ('<='):
 			case ('=<'):
-				isInViewport = (targetWidth <= windowWidth);
+				isInViewport = (windowWidth <= targetWidth);
 			break;
 			case ('='):
 				isInViewport = (targetWidth == windowWidth);
