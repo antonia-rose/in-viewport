@@ -12,7 +12,7 @@ var inViewport = function() {
 inViewport.prototype.is = function(target) {
 	var targetType = this.getTargetType(target),
 		targetWidth = targetType.width,
-		windowWidth = (window.outerWidth > 0) ? window.outerWidth : screen.width,
+		windowWidth = (window.outerWidth > 0) ? window.outerWidth : this.getOrientationWidth(),
 		isInViewport = false;
 
 	/* If getTargetType() returns width and operators */
@@ -88,6 +88,26 @@ inViewport.prototype.getTargetType = function(target) {
 		'width': targetWidth,
 		'operator': operator
 	}
+}
+
+/**
+ * Get the width relative to viewport orientation
+ * @return {Object} orientationWidth
+ */
+inViewport.prototype.getOrientationWidth = function() {
+    var orientationWidth = screen.width;
+
+    switch (window.orientation) {
+        case 0:
+        case 180:
+            orientationWidth = screen.width;
+        break;
+        case -90:
+        case 90:
+            orientationWidth = screen.height;
+        break;
+    }
+    return orientationWidth;
 }
 
 /**
